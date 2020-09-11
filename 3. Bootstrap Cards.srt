@@ -1,0 +1,1049 @@
+0
+1
+00:00:00,630 --> 00:00:05,000
+All right. So it's looking pretty good and we are ready.
+1
+
+2
+00:00:05,030 --> 00:00:12,360
+We've got our title section styles, our features page, our testimonial part styled, and now it's just a
+2
+
+3
+00:00:12,360 --> 00:00:19,830
+matter of styling the pricing section down here. And this is a commonly used component on many web sites
+3
+
+4
+00:00:19,830 --> 00:00:20,870
+that you go to
+4
+
+5
+00:00:20,940 --> 00:00:26,810
+you’ll see a pricing table. So you don't always have to reinvent the wheel.
+5
+
+6
+00:00:26,910 --> 00:00:32,640
+And in fact if you remember from earlier on, if we have a look at the Bootstrap examples, you'll see that
+6
+
+7
+00:00:32,640 --> 00:00:38,100
+one of the examples is just a pricing page that was built using Bootstrap.
+7
+
+8
+00:00:38,160 --> 00:00:45,210
+So we can actually just copy this component and put it into our web site and style it up, and then customize
+8
+
+9
+00:00:45,210 --> 00:00:47,150
+the style to our liking.
+9
+
+10
+00:00:47,190 --> 00:00:48,510
+So let's see how we can do that.
+10
+
+11
+00:00:48,510 --> 00:00:54,750
+So if you open up the Chrome Developer Tools and you click on this arrow, then we can start selecting
+11
+
+12
+00:00:54,750 --> 00:00:56,650
+the parts that we want.
+12
+
+13
+00:00:56,670 --> 00:00:58,980
+Now there's quite a few different divs around here.
+13
+
+14
+00:00:58,980 --> 00:01:01,640
+For example there's this top Pricing header.
+14
+
+15
+00:01:01,680 --> 00:01:07,020
+There's this part which is the entire body and then there's like sort of down here, which is a container
+15
+
+16
+00:01:07,050 --> 00:01:09,930
+that contains the footer as well as the pricing table.
+16
+
+17
+00:01:09,930 --> 00:01:17,850
+But if we navigate to around here, we've got this card deck that includes nothing but just the pricing
+17
+
+18
+00:01:17,850 --> 00:01:18,320
+table.
+18
+
+19
+00:01:18,330 --> 00:01:21,120
+So that's basically what we want.
+19
+
+20
+00:01:21,240 --> 00:01:25,490
+And if you click on the dropdown menu you can see that this is what it contains.
+20
+
+21
+00:01:25,680 --> 00:01:28,050
+So let's take a closer look at this.
+21
+
+22
+00:01:28,050 --> 00:01:36,810
+So if you right click on this card deck and you hit Copy element, and we head over to, again, Code Ply,
+22
+
+23
+00:01:37,310 --> 00:01:41,640
+and we start a new playground, we can paste it into here,
+23
+
+24
+00:01:41,670 --> 00:01:46,830
+and of course change our Bootstrap version and now hit run.
+24
+
+25
+00:01:46,860 --> 00:01:53,960
+And you can see that we've got a ready made pricing table that we can just paste into our project.
+25
+
+26
+00:01:53,970 --> 00:01:57,820
+Now of course you can change the code as you wish.
+26
+
+27
+00:01:57,900 --> 00:02:04,880
+So, for example, this button down here, it's a btn-lg outline-primary, so that’s the blue color.
+27
+
+28
+00:02:04,890 --> 00:02:11,700
+So what if we wanted it to be outline-dark, for example? Then we end up with outline-dark, a black button.
+28
+
+29
+00:02:12,180 --> 00:02:16,500
+And you can go through this and modify the parts that you want,
+29
+
+30
+00:02:16,500 --> 00:02:24,760
+and of course change the relevant bits of text to what your company is going to advertise.
+30
+
+31
+00:02:24,810 --> 00:02:32,510
+But essentially this is a really really quick and easy way of importing and using components.
+31
+
+32
+00:02:32,550 --> 00:02:38,560
+It's not just Bootstrap examples that you can look at the code from. There’s a web site called Bootsnipp
+32
+
+33
+00:02:38,580 --> 00:02:44,760
+which I recommend you to take a look at, where they've got snippets of code for all sorts of
+33
+
+34
+00:02:44,760 --> 00:02:50,520
+different components that you can look at and refer to and see how they were created.
+34
+
+35
+00:02:50,520 --> 00:02:57,270
+So, for example, if you wanted to look for a, maybe like a log in screen, then you can see that there's
+35
+
+36
+00:02:57,360 --> 00:03:02,450
+many many different things that people have styled up and created the components.
+36
+
+37
+00:03:02,490 --> 00:03:07,960
+And you can look at the HTML and the CSS that was needed to create this.
+37
+
+38
+00:03:07,980 --> 00:03:13,830
+And you can of course incorporate into your own project depending on the licensing for each of these
+38
+
+39
+00:03:13,920 --> 00:03:14,740
+components.
+39
+
+40
+00:03:14,760 --> 00:03:17,650
+But, you know, in our case we're learning about Bootstrap,
+40
+
+41
+00:03:17,670 --> 00:03:24,100
+so, as always, we want to understand what we're doing before we start just blindly copy and pasting code.
+41
+
+42
+00:03:24,120 --> 00:03:30,840
+So let's try and understand how this pricing table was constructed and create our own using the same
+42
+
+43
+00:03:30,900 --> 00:03:33,120
+underlying Bootstrap components.
+43
+
+44
+00:03:33,120 --> 00:03:40,600
+So in the example code that you see here the word that comes up the most often is this word card.
+44
+
+45
+00:03:40,830 --> 00:03:47,430
+And this is because what they're using here in order to create this pricing table is a Bootstrap component
+45
+
+46
+00:03:47,430 --> 00:03:54,230
+called Bootstrap cards, and this provides a container that looks something like this.
+46
+
+47
+00:03:54,270 --> 00:03:58,440
+So you can have an image at the top, a title, some text and a button.
+47
+
+48
+00:03:58,440 --> 00:04:03,170
+And because in most cases a lot of web sites need something like this,
+48
+
+49
+00:04:03,210 --> 00:04:07,920
+they’ve made it easy for you to incorporate this using Bootstrap.
+49
+
+50
+00:04:07,920 --> 00:04:12,030
+So, because they’re a little bit like your HTML, they have a header,
+50
+
+51
+00:04:12,150 --> 00:04:18,150
+they have a body, and they can also have a footer if you so wish.
+51
+
+52
+00:04:18,150 --> 00:04:23,530
+So let's head over to our Code Pen and just hit command A,
+52
+
+53
+00:04:23,580 --> 00:04:27,120
+and we're going to delete all of our existing HTML code.
+53
+
+54
+00:04:27,210 --> 00:04:35,880
+Now let's create a card from scratch with a header, a body and a footer, and we can do that by following the
+54
+
+55
+00:04:35,880 --> 00:04:38,150
+documentation code over here.
+55
+
+56
+00:04:38,310 --> 00:04:43,390
+So the first thing that we’ll need is a div with the class that's card.
+56
+
+57
+00:04:43,500 --> 00:04:45,480
+So this is going to be a card.
+57
+
+58
+00:04:45,690 --> 00:04:52,090
+And inside here we're going to have a card header, a card body, and a card footer.
+58
+
+59
+00:04:52,110 --> 00:04:59,380
+So that's going to be three divs and the first one is going to have the class of card-header.
+59
+
+60
+00:05:00,020 --> 00:05:07,010
+And then I'm just going to copy and paste this and I'm going to create the other two, which is going
+60
+
+61
+00:05:07,010 --> 00:05:11,930
+to be card-body and card-footer.
+61
+
+62
+00:05:12,110 --> 00:05:15,500
+And then if I hit run, it's actually quite hard to see what's going on here,
+62
+
+63
+00:05:15,510 --> 00:05:17,230
+so I'll add some text.
+63
+
+64
+00:05:17,240 --> 00:05:27,780
+So, for example, this is the Card Header, Card Body, and Card Footer.
+64
+
+65
+00:05:28,080 --> 00:05:28,320
+All right.
+65
+
+66
+00:05:28,320 --> 00:05:34,250
+Let's hit run and you can see that this is what our card currently looks like.
+66
+
+67
+00:05:34,260 --> 00:05:39,120
+It's taking up the full width of the screen, which is why it’s going from edge to edge styling the different
+67
+
+68
+00:05:39,120 --> 00:05:40,580
+sections slightly differently.
+68
+
+69
+00:05:40,650 --> 00:05:47,010
+So the header has this little shadow appear, and it's highlighted in a sort of light grey color, and the
+69
+
+70
+00:05:47,010 --> 00:05:48,220
+body is white.
+70
+
+71
+00:05:48,270 --> 00:05:53,670
+So I'm going to go ahead and delete this last div which is the card footer, which we don't really need,
+71
+
+72
+00:05:53,730 --> 00:06:00,220
+and I'm just going to copy the rest of the code so that we can again transplant it into our web site.
+72
+
+73
+00:06:00,450 --> 00:06:07,980
+So, in the pricing section, just below the title section and the subtitle, I'm going to paste our card
+73
+
+74
+00:06:08,040 --> 00:06:14,010
+in here and I'm going to delete where it says Card Header and Card Body.
+74
+
+75
+00:06:14,010 --> 00:06:19,650
+Now we're going to need three of these because we have three pricing plans at the moment, and each
+75
+
+76
+00:06:19,650 --> 00:06:27,410
+of them are going to be a single Bootstrap card, just as they did over here in their pricing example.
+76
+
+77
+00:06:27,420 --> 00:06:35,130
+So let's go ahead and copy and paste this twice more, so that we have three cards, and I'm going to move
+77
+
+78
+00:06:35,130 --> 00:06:37,070
+some of this content over.
+78
+
+79
+00:06:37,080 --> 00:06:41,970
+So for example Chihuahua is going to be in the card header.
+79
+
+80
+00:06:41,970 --> 00:06:49,420
+That's the name of the pricing plan. And the rest of this content is going to be inside the card body.
+80
+
+81
+00:06:49,770 --> 00:06:52,450
+And we're going to do the same for the other two
+81
+
+82
+00:06:52,470 --> 00:06:58,960
+pricing tiers.
+82
+
+83
+00:06:59,090 --> 00:06:59,390
+All right.
+83
+
+84
+00:06:59,430 --> 00:07:03,070
+So let's just go ahead and beautify, and we're done.
+84
+
+85
+00:07:03,090 --> 00:07:07,690
+All right, so let's hit save and see what this looks like as it is.
+85
+
+86
+00:07:07,860 --> 00:07:11,490
+And you can see that, similar to what we saw on Code Ply,
+86
+
+87
+00:07:11,640 --> 00:07:16,440
+they’re actually taking up the full width of the page at the moment.
+87
+
+88
+00:07:16,440 --> 00:07:21,410
+Now, we need to change that to make them stack side by side, like so.
+88
+
+89
+00:07:21,450 --> 00:07:27,820
+Now, in the case of this Bootstrap example, what they've done is, they used this class called a card deck.
+89
+
+90
+00:07:27,870 --> 00:07:29,460
+So let me show you what that does.
+90
+
+91
+00:07:29,460 --> 00:07:35,790
+So all we need is a div that is going to go around all three of our cards and it's going to have the
+91
+
+92
+00:07:35,790 --> 00:07:37,720
+class of card-deck.
+92
+
+93
+00:07:37,830 --> 00:07:44,460
+And then I'm going to move this closing div all the way down to here, so that all three of our cards
+93
+
+94
+00:07:44,490 --> 00:07:47,340
+go inside the card-deck div.
+94
+
+95
+00:07:47,490 --> 00:07:52,410
+So now if we hit save and we head over to our web site and refresh,
+95
+
+96
+00:07:52,410 --> 00:07:57,270
+then you can see that automatically, by wrapping all of our cards inside a card deck,
+96
+
+97
+00:07:57,300 --> 00:08:04,920
+they get distributed evenly across the width of the web site and they also end up with the same height.
+97
+
+98
+00:08:04,920 --> 00:08:06,910
+Now there’s just one problem with card decks.
+98
+
+99
+00:08:06,960 --> 00:08:11,430
+They're not quite as adaptable as the Bootstrap grid system.
+99
+
+100
+00:08:11,430 --> 00:08:16,830
+Now, if we take a look at the Bootstrap docs for cards, you can see that they've already got you sorted.
+100
+
+101
+00:08:16,830 --> 00:08:24,210
+So under Using grid markup, you can see that you can actually place these cards inside our beloved Bootstrap
+101
+
+102
+00:08:24,240 --> 00:08:31,100
+grid system in order to size them accordingly to how responsive you want your web site to be.
+102
+
+103
+00:08:31,380 --> 00:08:33,730
+So we should really know how to do this.
+103
+
+104
+00:08:33,810 --> 00:08:36,670
+But here's something new to challenge us.
+104
+
+105
+00:08:36,810 --> 00:08:45,190
+How can you make the third card become 100 percent at the iPad width, so basically medium and below,
+105
+
+106
+00:08:45,300 --> 00:08:51,750
+but keep the other two only 50 percent, but only when you get onto the full mobile sized do you make
+106
+
+107
+00:08:51,780 --> 00:08:55,290
+all three 100 percent the width of the screen?
+107
+
+108
+00:08:55,290 --> 00:08:59,750
+So at this point you’ve already seen and know quite a lot about Bootstrap grids,
+108
+
+109
+00:08:59,760 --> 00:09:02,430
+so I'm going to leave this to you as a challenge.
+109
+
+110
+00:09:02,520 --> 00:09:07,780
+So pause the video now and see if you can complete this challenge.
+110
+
+111
+00:09:07,800 --> 00:09:08,160
+All right.
+111
+
+112
+00:09:08,160 --> 00:09:10,400
+So this is a little bit different.
+112
+
+113
+00:09:10,410 --> 00:09:13,930
+So it might have been quite challenging but let's see if you got it right.
+113
+
+114
+00:09:13,950 --> 00:09:15,900
+So let's go through the solution now.
+114
+
+115
+00:09:15,930 --> 00:09:22,650
+The first thing that you need for any sort of grid system to work is, you need a div class of row, so
+115
+
+116
+00:09:22,680 --> 00:09:28,890
+I'm going to replace card-deck with row in this case, because it's a little bit easier to work with
+116
+
+117
+00:09:29,010 --> 00:09:37,240
+in our case. Now the next thing that we need to do is to wrap each of our cards inside a Bootstrap grid.
+117
+
+118
+00:09:37,320 --> 00:09:45,480
+So I'm going to create another div and I'm going to give this a class of col-LG-4, because by
+118
+
+119
+00:09:45,510 --> 00:09:46,410
+default,
+119
+
+120
+00:09:46,440 --> 00:09:53,700
+when we're on the largest sizes, so laptop and desktop sizes, I want each card to take up four units, so
+120
+
+121
+00:09:53,700 --> 00:09:55,760
+that's a third of the page.
+121
+
+122
+00:09:55,940 --> 00:10:01,450
+And that behavior I really want to have for all three cards.
+122
+
+123
+00:10:01,470 --> 00:10:04,650
+So I'm going to do the same for the other two as well.
+123
+
+124
+00:10:04,650 --> 00:10:10,620
+col-lg-4 for the second card, and also
+124
+
+125
+00:10:14,580 --> 00:10:21,690
+and also for our last card. Let’s just beautify that.
+125
+
+126
+00:10:21,740 --> 00:10:22,690
+All right. Cool.
+126
+
+127
+00:10:22,700 --> 00:10:28,890
+So now that means that on a laptop and desktop it should take up a third of the width.
+127
+
+128
+00:10:29,120 --> 00:10:36,290
+Now let's drill in a little bit deeper and specify what we want on iPad which is the medium size.
+128
+
+129
+00:10:36,320 --> 00:10:42,410
+So on the medium size we want the top two to take up half of the width.
+129
+
+130
+00:10:42,470 --> 00:10:48,980
+So that's going to be col-md-6, and I'm going to apply that to this one as well.
+130
+
+131
+00:10:48,980 --> 00:10:51,890
+So these two are going to be 50 percent on iPad.
+131
+
+132
+00:10:51,950 --> 00:10:58,700
+But the last one is either going to be col-md-12 to say that on the medium sizes it should
+132
+
+133
+00:10:58,700 --> 00:11:05,030
+take up a full 12 units or the full width or, if you remember, if you don't specify any columns it just
+133
+
+134
+00:11:05,030 --> 00:11:07,610
+defaults to 100 percent.
+134
+
+135
+00:11:07,670 --> 00:11:12,170
+So that means any size that's below large is just going to be 100 percent.
+135
+
+136
+00:11:12,170 --> 00:11:16,170
+And in this case any size below medium is going to be a 100 percent.
+136
+
+137
+00:11:16,340 --> 00:11:24,650
+So now if you hit save and refresh and we start going down to our iPad size, you can see that we've
+137
+
+138
+00:11:24,650 --> 00:11:26,970
+got one, two and three.
+138
+
+139
+00:11:27,200 --> 00:11:31,390
+And then finally to our mobile size, one, two, three.
+139
+
+140
+00:11:31,400 --> 00:11:34,180
+So that's looking pretty neat.
+140
+
+141
+00:11:34,180 --> 00:11:41,870
+Now the next challenge I have for you is, I want you to make these buttons match the Bootstrap example
+141
+
+142
+00:11:41,880 --> 00:11:42,600
+styles.
+142
+
+143
+00:11:42,620 --> 00:11:49,020
+So have it the same as these buttons, so, namely, they're going to take up the full width of the card.
+143
+
+144
+00:11:49,070 --> 00:11:53,680
+The first one’s going to be an outline button, the second two are going to be solid buttons,
+144
+
+145
+00:11:54,020 --> 00:11:56,030
+and it's all going to have the dark theme.
+145
+
+146
+00:11:56,030 --> 00:11:59,560
+So pause the video and see if you can complete this challenge.
+146
+
+147
+00:12:01,370 --> 00:12:05,210
+All right. So this one should be easy, because we've done this quite a few times.
+147
+
+148
+00:12:05,240 --> 00:12:09,720
+So let's head into our HTML and start adding some more Bootstrap classes.
+148
+
+149
+00:12:09,740 --> 00:12:12,470
+So our button currently doesn't have any classes.
+149
+
+150
+00:12:12,680 --> 00:12:14,140
+So we need to add some.
+150
+
+151
+00:12:14,210 --> 00:12:19,290
+And we're going to add btn so that it styles it as a Bootstrap button.
+151
+
+152
+00:12:19,520 --> 00:12:25,160
+And then we're going to have btn-lg to specify that we want the larger button, and then we're going
+152
+
+153
+00:12:25,160 --> 00:12:30,370
+to say btn-block so that the button takes up the full width of the card.
+153
+
+154
+00:12:30,500 --> 00:12:37,520
+And finally the first one is going to be a btn-outline-dark button, and the other two buttons are
+154
+
+155
+00:12:37,520 --> 00:12:41,730
+going to have pretty much the same classes,
+155
+
+156
+00:12:41,780 --> 00:12:45,950
+apart from the fact that they're not going to be outline buttons, and they're going to be just
+156
+
+157
+00:12:45,950 --> 00:12:48,170
+btn-dark as in the solid buttons.
+157
+
+158
+00:12:48,200 --> 00:12:54,960
+So let's hit save and let's refresh and, voila, our beautiful buttons have appeared.
+158
+
+159
+00:12:55,130 --> 00:13:01,780
+So now all we need to do is just to change the CSS a little bit to customize the layout and the text.
+159
+
+160
+00:13:01,790 --> 00:13:06,950
+So the first thing I want to do is I want to add a little bit of padding from all sides. So let's head
+160
+
+161
+00:13:06,950 --> 00:13:07,990
+into 
+161
+
+162
+00:13:08,010 --> 00:13:08,650
+styles.css,
+162
+
+163
+00:13:08,840 --> 00:13:13,180
+and the part that I'm going to put the padding on is this pricing section.
+163
+
+164
+00:13:13,190 --> 00:13:18,820
+So I'm going to scroll down here and I'm going to add the pricing section
+164
+
+165
+00:13:21,570 --> 00:13:29,010
+and here I'm going to target the pricing selector. Let’s just check the spelling, pricing, pricing, looks
+165
+
+166
+00:13:29,010 --> 00:13:29,810
+good.
+166
+
+167
+00:13:30,090 --> 00:13:36,270
+And then I'm going to add that padding which is going to be roughly around 100 pixels, all four sides,
+167
+
+168
+00:13:37,170 --> 00:13:41,490
+and that gives it a little bit more space and it looks a lot nicer.
+168
+
+169
+00:13:41,520 --> 00:13:46,360
+Now it's rare that you want this kind of static amount of padding on all sizes,
+169
+
+170
+00:13:46,500 --> 00:13:52,230
+but I find that with the pricing plan, even on mobile, you need a little bit of space on all four sides,
+170
+
+171
+00:13:52,260 --> 00:13:53,990
+so I think it works quite well.
+171
+
+172
+00:13:54,000 --> 00:13:59,840
+Now of course if you feel different to how I feel then feel free to change it to however you want it
+172
+
+173
+00:13:59,840 --> 00:14:01,020
+to,
+173
+
+174
+00:14:01,110 --> 00:14:04,190
+but I quite like the way that this is spaced out.
+174
+
+175
+00:14:04,220 --> 00:14:04,550
+All right.
+175
+
+176
+00:14:04,550 --> 00:14:11,100
+So the next thing I'm going to do is I'm going to add a little bit of padding around each of these columns
+176
+
+177
+00:14:11,520 --> 00:14:17,880
+that holds a card, so that we push it down away from this title section, and also give them a bit more
+177
+
+178
+00:14:17,880 --> 00:14:19,670
+space from each other.
+178
+
+179
+00:14:19,710 --> 00:14:25,180
+So let's go ahead into index.html and give each of these columns a class name.
+179
+
+180
+00:14:25,350 --> 00:14:28,470
+So I'm just going to call this pricing-column,
+180
+
+181
+00:14:29,670 --> 00:14:35,610
+and I'm going to paste this class across all three cards.
+181
+
+182
+00:14:35,730 --> 00:14:36,010
+All right.
+182
+
+183
+00:14:36,020 --> 00:14:43,850
+So now let's hit save and we can go ahead and select that pricing-column, and then we're going to add
+183
+
+184
+00:14:43,940 --> 00:14:45,630
+some padding in here.
+184
+
+185
+00:14:45,620 --> 00:14:52,340
+So the amount I'm going to add is roughly around, I think, 3 percent from the top and bottom, and then
+185
+
+186
+00:14:52,340 --> 00:14:54,650
+just 2 percent from the left and right,
+186
+
+187
+00:14:54,650 --> 00:14:56,370
+so from each of the cards.
+187
+
+188
+00:14:56,390 --> 00:14:57,990
+So now if we refresh,
+188
+
+189
+00:14:58,010 --> 00:15:03,570
+you can see that there's a healthy bit of space that moves the pricing table away from this title,
+189
+
+190
+00:15:03,590 --> 00:15:07,540
+and also we have a little bit more space between each of the cards.
+190
+
+191
+00:15:07,560 --> 00:15:13,250
+Now, the last thing I want to do is just to make all the content inside the cards center aligned, because
+191
+
+192
+00:15:13,250 --> 00:15:14,670
+our buttons are center aligned,
+192
+
+193
+00:15:14,690 --> 00:15:19,360
+and it looks kind of weird when it's all left aligned and it's not lined up with the button.
+193
+
+194
+00:15:19,370 --> 00:15:26,630
+So, in order to do that, I can go into the pricing section and change the text-align property to center,
+194
+
+195
+00:15:26,720 --> 00:15:28,810
+hit save and refresh,
+195
+
+196
+00:15:29,060 --> 00:15:35,120
+and this is our beautiful pricing section. And you can see that took really very little effort at all.
+196
+
+197
+00:15:35,150 --> 00:15:40,300
+And you should now understand how each of these cards work, and all the components that we put inside,
+197
+
+198
+00:15:40,310 --> 00:15:42,990
+for example the button or the card header.
+198
+
+199
+00:15:43,250 --> 00:15:50,600
+So this is a very very simple pricing page that we've created ourselves without having to rely on the
+199
+
+200
+00:15:50,600 --> 00:15:51,540
+example code.
+200
+
+201
+00:15:51,680 --> 00:15:55,060
+And you can see that we're pretty close to what theirs looks like.
+201
+
+202
+00:15:55,070 --> 00:15:57,820
+And that didn't really take very long at all.
+202
+
+203
+00:15:57,830 --> 00:16:04,250
+Now, in the next lesson we're going to talk about some more advanced CSS rather than Bootstrap, and it's
+203
+
+204
+00:16:04,260 --> 00:16:11,480
+so that we can try and get our image to go behind this feature section so that it can cut it off at
+204
+
+205
+00:16:11,570 --> 00:16:16,350
+around this point because at the moment this is a little bit too big,
+205
+
+206
+00:16:16,670 --> 00:16:20,180
+and I want the section to end right about here,
+206
+
+207
+00:16:20,180 --> 00:16:24,990
+so we have to move this image behind this feature section.
+207
+
+208
+00:16:25,040 --> 00:16:28,520
+So we're going to talk about the z-index and the CSS stacking order.
+208
+
+209
+00:16:28,520 --> 00:16:29,870
+All of that is yet to come.
+209
+
+210
+00:16:29,900 --> 00:16:31,250
+And I'll see you on the next lesson.

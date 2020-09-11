@@ -1,0 +1,111 @@
+body{
+margin-bottom: 0px;
+}
+#title{
+
+    background-color:rgb(250, 3, 77) ;
+    color: white;
+}
+.hungry{
+    font-family: 'Sacramento' ;
+    font-size: 50px;
+}
+.do{
+    font-size: 50px;
+     
+}
+.choose{
+    width: 70%;
+}
+.burger{
+    width: 400px;
+    height: 300px;
+}
+.most-order{
+   text-align: center;
+}
+.container-fluid{
+    padding: 2% 12%;
+}
+.egusi{
+    width: 300px;
+    height: 200px;
+  
+   padding: 30px;
+}
+.ofada{
+    width: 300px;
+    height: 200px;
+    padding: 30px;
+}
+.sha{
+    width: 300px;
+    height: 200px;
+    padding: 30px;
+}
+.vege{
+    width: 300px;
+    height: 200px;
+    padding: 30px ; 
+}
+.ordering{
+    background-color:rgba(250, 3, 77, 0.918) ;
+    color: white;
+    text-align: center;
+}
+.location{
+    width: 70px;
+    height: 50px;
+    margin: 50px 0px 20px 0px;
+}
+.food{
+    width: 70px;
+    height: 50px;
+    margin: 50px 0px 20px 0px ;
+}
+.delivery{
+    width: 70px;
+    height: 50px;
+    margin: 50px 0px 20px 0px ;
+}
+h2{
+    margin-bottom: 0px;
+}
+/*comment */
+.comment{
+    text-align: center;
+    padding:2% 12% ;
+    height: 450px;
+}
+.avatar1{
+    width: 120px;
+    height: 150px;
+    padding: 30px 0px 30px 0px;
+    border-radius: 100%;
+}
+.avatar2{
+    width: 120px;
+    height: 150px;
+    padding: 30px 0px 30px 0px;
+    border-radius: 100%;
+}
+.avatar3{
+    width: 120px;
+    height: 150px;
+    padding: 30px 0px 30px 0px;
+    border-radius: 100%;
+}
+/*footer*/
+#footer{
+  
+    background-color: rgba(250, 3, 77, 0.918) ;
+    text-align: center;
+   
+}
+.foot{
+    padding: 20px 10px;
+    
+}
+.reference{
+    margin-bottom: 0px;
+}
